@@ -1,5 +1,7 @@
 import java.util.Random;
 import java.util.Scanner;
+import java.util.Arrays;
+
 
 public class SlotMachine {
     // Символи за барабаните (можеш да добавиш повече)
@@ -45,6 +47,11 @@ public class SlotMachine {
 
             int payout = calculatePayout(result, bet);
             if (payout > 0) {
+                long diamonds = Arrays.stream(result).filter(s -> s.equals("💎")).count();
+                if (diamonds == 2) {
+                    System.out.println("💎 БОНУС! Получаваш едно безплатно завъртане!");
+                    bet = 0; // не ти взима баланс
+}
                 System.out.println("Печалба: " + payout + " монети!");
                 balance += payout;
             } else {
