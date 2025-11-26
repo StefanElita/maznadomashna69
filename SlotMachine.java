@@ -3,7 +3,7 @@ import java.util.Scanner;
 
 public class SlotMachine {
     // Символи за барабаните (можеш да добавиш повече)
-    private static final String[] SYMBOLS = { "🍒", "🍋", "🔔", "💎", "7️⃣" };
+    private static final String[] SYMBOLS = { "🍒", "🍋", "🔔", "💎", "7️⃣", "⭐" };
     private static final Random RANDOM = new Random();
 
     public static void main(String[] args) {
